@@ -357,7 +357,7 @@
   <section class="step active" id="step1">
 
     <div class="howto">
-      <b>Cómo funciona:</b> escribe una tarjeta en la columna que corresponda — <b>qué es</b> la KP, <b>qué hace</b> hoy, o <b>qué no hace</b>. Si crees que una tarjeta existente está mal ubicada, arrástrala a otra columna. Vota con ▲ las tarjetas con las que estés de acuerdo.
+      <b>Cómo funciona:</b> escribe una tarjeta en la columna que corresponda — <b>qué es</b> la KP, <b>qué hace</b> hoy, o <b>qué no hace</b>. Si crees que una tarjeta existente está mal ubicada, arrástrala a otra columna. Vota con 👍 las tarjetas con las que estés de acuerdo.
     </div>
 
     <div class="identity">
@@ -576,7 +576,7 @@ function renderBoard(){
         <div class="card-meta">
           <span><span class="card-emoji">${c.emoji||''}</span>${escapeHtml(c.autor||'anónimo')}${c.division? ' · '+escapeHtml(c.division):''}</span>
           <div class="card-move">
-            <button class="vote-btn" data-vote="${c.id}">▲ ${c.votos||0}</button>
+            <button class="vote-btn" data-vote="${c.id}">👍 ${c.votos||0}</button>
             <select data-move="${c.id}">
               <option value="">mover a…</option>
               ${COLS.filter(x=>x!==col).map(x=>`<option value="${x}">${COL_LABEL[x]}</option>`).join("")}
