@@ -416,8 +416,14 @@ async function apiPost(action, payload){
       headers:{"Content-Type":"text/plain;charset=utf-8"},
       body: JSON.stringify({action, payload})
     });
-    return await res.json();
-  }catch(err){ console.error(err); return {ok:false}; }
+    const raw = await res.text();
+    try{
+      return JSON.parse(raw);
+    }catch(parseErr){
+      console.error("Respuesta del backend no es JSON (posible error de Apps Script):", raw.slice(0,500));
+      return {ok:false, error:"Respuesta inesperada del backend — revisa la consola."};
+    }
+  }catch(err){ console.error(err); return {ok:false, error: String(err)}; }
 }
 
 async function loadCards(){
@@ -576,7 +582,11 @@ document.getElementById("sg_submit").onclick = async ()=>{
   renderSuggestions();
   document.getElementById("sg_cambio").value = "";
   document.getElementById("sg_razon").value = "";
-  await apiPost("addSuggestion", payload);
+  const result = await apiPost("addSuggestion", payload);
+  if(!result || !result.ok){
+    alert("⚠️ No se guardó en el servidor: " + (result && result.error ? result.error : "sin respuesta del backend. Revisa la consola (F12) para más detalle."));
+    console.error("addSuggestion falló:", result);
+  }
 };
 
 function renderSuggestions(){
