@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Knowledge Platform — Qué es, qué hace, qué no hace</title>
+<title>Knowledge Platform — I Like, I Wish, I Wonder</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -36,7 +36,6 @@
     padding:0 0 90px;
   }
 
-  /* ---------- header ---------- */
   .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
   header{padding:44px 0 8px;}
   .eyebrow{
@@ -55,20 +54,11 @@
   }
   .sub{max-width:640px;color:var(--text);font-size:15.5px;line-height:1.6;}
 
-  /* ---------- tabs ---------- */
-  .tabs{
-    display:flex;gap:28px;
-    border-bottom:1px solid var(--border);
-    margin-top:28px;
-  }
+  .tabs{display:flex;gap:28px;border-bottom:1px solid var(--border);margin-top:28px;}
   .tab{
-    font-family:'Poppins',sans-serif;
-    font-weight:600;font-size:15.5px;
-    color:var(--muted);
-    padding:12px 2px 14px;
-    cursor:pointer;
-    border-bottom:3px solid transparent;
-    margin-bottom:-1px;
+    font-family:'Poppins',sans-serif;font-weight:600;font-size:15.5px;
+    color:var(--muted);padding:12px 2px 14px;cursor:pointer;
+    border-bottom:3px solid transparent;margin-bottom:-1px;
   }
   .tab.active{color:var(--navy);border-bottom-color:var(--blue);}
 
@@ -76,125 +66,81 @@
   section.step{display:none;}
   section.step.active{display:block;}
 
-  /* ---------- banner ---------- */
   .banner{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12.5px;
-    background:var(--gold-soft);
-    border:1px solid #e8cf9e;
-    color:#8a6413;
-    padding:11px 16px;
-    border-radius:var(--radius-sm);
-    margin-bottom:24px;
-    display:none;
+    font-family:'IBM Plex Mono',monospace;font-size:12.5px;
+    background:var(--gold-soft);border:1px solid #e8cf9e;color:#8a6413;
+    padding:11px 16px;border-radius:var(--radius-sm);margin-bottom:24px;display:none;
   }
   .banner.show{display:block;}
 
-  /* ---------- instructions card ---------- */
   .howto{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    padding:18px 22px;
-    margin-bottom:26px;
-    font-size:14.5px;
-    line-height:1.65;
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:18px 22px;margin-bottom:26px;
+    font-size:14.5px;line-height:1.65;
   }
   .howto b{color:var(--navy);}
 
-  /* ---------- identity ---------- */
   .identity{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    padding:18px 22px;
-    margin-bottom:22px;
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:18px 22px;margin-bottom:22px;
   }
   .identity-title{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--muted);margin-bottom:12px;
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--muted);margin-bottom:12px;
   }
   .identity-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
   .identity-row input{width:auto;flex:1;min-width:160px;}
   .emoji-current{
-    font-size:26px;line-height:1;
-    background:var(--blue-soft);
-    border:1px solid #c9d6fb;
-    border-radius:var(--radius-sm);
-    width:48px;height:48px;
-    display:flex;align-items:center;justify-content:center;
-    cursor:pointer;flex-shrink:0;
-    user-select:none;
+    font-size:26px;line-height:1;background:var(--blue-soft);
+    border:1px solid #c9d6fb;border-radius:var(--radius-sm);
+    width:48px;height:48px;display:flex;align-items:center;justify-content:center;
+    cursor:pointer;flex-shrink:0;user-select:none;
   }
   .emoji-current.pulse{outline:2px solid var(--blue);}
-  .emoji-grid{
-    display:none;
-    grid-template-columns:repeat(auto-fill,minmax(40px,1fr));
-    gap:6px;margin-top:12px;
-  }
+  .emoji-grid{display:none;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:6px;margin-top:12px;}
   .emoji-grid.open{display:grid;}
   .emoji-opt{
-    font-size:22px;text-align:center;
-    padding:7px 0;border-radius:8px;
-    cursor:pointer;border:1px solid transparent;
-    user-select:none;
+    font-size:22px;text-align:center;padding:7px 0;border-radius:8px;
+    cursor:pointer;border:1px solid transparent;user-select:none;
   }
   .emoji-opt:hover{background:var(--blue-soft);}
   .emoji-opt.selected{background:var(--blue-soft);border-color:var(--blue);}
   .identity-status{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11px;color:var(--green);
+    font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--green);
     margin-top:10px;display:none;
   }
   .identity-status.show{display:block;}
   .card-emoji{font-size:15px;margin-right:2px;}
 
-  /* ---------- participants ---------- */
-  .participants{
-    display:flex;align-items:center;gap:10px;flex-wrap:wrap;
-    margin-bottom:24px;
-    font-size:13px;
-  }
+  .participants{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:24px;font-size:13px;}
   .participants .label{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--muted);
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);
   }
   .chip{
-    background:var(--card);
-    border:1px solid var(--border);
-    padding:5px 12px;
-    border-radius:999px;
-    display:inline-flex;align-items:center;gap:7px;
-    box-shadow:var(--shadow);
-    color:var(--navy);font-weight:500;
+    background:var(--card);border:1px solid var(--border);padding:5px 12px;
+    border-radius:999px;display:inline-flex;align-items:center;gap:7px;
+    box-shadow:var(--shadow);color:var(--navy);font-weight:500;
   }
   .chip .dot{width:7px;height:7px;border-radius:50%;background:var(--green);}
   .empty{color:var(--muted);font-size:13px;}
 
-  /* ---------- board ---------- */
   .board{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
   @media (max-width:920px){ .board{grid-template-columns:1fr;} }
 
   .lane{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    padding:20px;
-    display:flex;flex-direction:column;
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;
     border-top:4px solid var(--blue);
   }
-  .lane[data-col="que_hace"]{border-top-color:var(--green);}
-  .lane[data-col="que_no_hace"]{border-top-color:var(--red);}
+  .lane[data-col="i_like"]{border-top-color:var(--green);}
+  .lane[data-col="i_wish"]{border-top-color:var(--gold);}
+  .lane[data-col="i_wonder"]{border-top-color:var(--blue);}
   .lane.dragover{outline:2px solid var(--blue);outline-offset:2px;}
   .lane-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:4px;}
   .lane-title{
-    font-family:'Poppins',sans-serif;
-    font-weight:600;font-size:19px;color:var(--navy);
+    font-family:'Poppins',sans-serif;font-weight:600;font-size:19px;color:var(--navy);
+    display:flex;align-items:center;gap:8px;
   }
   .lane-count{
     font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);
@@ -205,26 +151,15 @@
   .cards{display:flex;flex-direction:column;gap:10px;flex:1;min-height:60px;}
 
   .card{
-    background:#fbfcfe;
-    border:1px solid var(--border);
-    border-radius:var(--radius-sm);
-    padding:13px 14px 11px;
-    cursor:grab;
-    font-size:14px;line-height:1.5;
-    color:var(--text);
+    background:#fbfcfe;border:1px solid var(--border);border-radius:var(--radius-sm);
+    padding:13px 14px 11px;cursor:grab;font-size:14px;line-height:1.5;color:var(--text);
   }
   .card.dragging{opacity:.45;}
   .card.seed{background:var(--blue-soft);border-color:#c9d6fb;}
-  .seed-note{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:10px;color:var(--blue);
-    margin-top:8px;
-  }
+  .seed-note{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--blue);margin-top:8px;}
   .card-meta{
-    margin-top:10px;
-    display:flex;align-items:center;justify-content:space-between;gap:8px;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:10.5px;color:var(--muted);
+    margin-top:10px;display:flex;align-items:center;justify-content:space-between;gap:8px;
+    font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);
   }
   .card-move{display:flex;gap:6px;align-items:center;}
   .card-move select{
@@ -241,97 +176,65 @@
 
   .add-form{margin-top:16px;border-top:1px dashed var(--border);padding-top:16px;}
   textarea, input, select{
-    width:100%;
-    background:#fff;
-    border:1px solid var(--border);
-    color:var(--navy);
-    border-radius:var(--radius-sm);
-    padding:10px 12px;
-    font-family:'Inter',sans-serif;
-    font-size:14px;
-    resize:vertical;
+    width:100%;background:#fff;border:1px solid var(--border);color:var(--navy);
+    border-radius:var(--radius-sm);padding:10px 12px;
+    font-family:'Inter',sans-serif;font-size:14px;resize:vertical;
   }
   textarea:focus, input:focus{outline:2px solid var(--blue);outline-offset:0;border-color:transparent;}
   textarea{min-height:58px;margin-bottom:8px;}
   .row2{display:flex;gap:8px;margin-bottom:8px;}
   button.primary{
-    width:100%;
-    background:var(--blue);
-    color:#fff;
-    border:none;
-    padding:11px 12px;
-    border-radius:999px;
-    font-family:'Poppins',sans-serif;
-    font-weight:600;font-size:13.5px;
-    cursor:pointer;
+    width:100%;background:var(--blue);color:#fff;border:none;padding:11px 12px;
+    border-radius:999px;font-family:'Poppins',sans-serif;font-weight:600;
+    font-size:13.5px;cursor:pointer;
   }
   button.primary:hover{filter:brightness(1.07);}
 
-  /* ---------- step 2 ---------- */
-  .madlib-wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;}
-  @media (max-width:920px){.madlib-wrap{grid-template-columns:1fr;}}
+  .vision-current{
+    background:var(--navy);color:#fff;border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:32px 36px;margin-bottom:26px;position:relative;
+  }
+  .vision-current .tag{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;color:#9fb0e0;margin-bottom:14px;
+  }
+  .vision-current .text{
+    font-family:'Poppins',sans-serif;font-weight:500;
+    font-size:clamp(17px,2vw,21px);line-height:1.65;
+  }
 
-  .ml-card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    padding:30px 34px;
-  }
-  .ml-line{
-    font-family:'Poppins',sans-serif;
-    font-weight:500;
-    color:var(--navy);
-    font-size:clamp(19px,2.3vw,25px);
-    line-height:2.05;
-  }
-  .ml-word{color:var(--muted);font-weight:500;}
-  .blank{
-    display:inline-block;min-width:150px;
-    border-bottom:2.5px solid var(--blue);
-    padding:0 4px 1px;
-  }
-  .blank input{
-    background:transparent;border:none;color:var(--blue);
-    font-family:'Poppins',sans-serif;font-weight:600;font-size:.8em;
-    padding:0;width:100%;min-width:150px;border-radius:0;
-  }
-  .blank input:focus{outline:none;}
-  .blank input::placeholder{color:#a9bcf9;font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:12px;}
+  .suggest-wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  @media (max-width:920px){.suggest-wrap{grid-template-columns:1fr;}}
 
-  .suggest-btn{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12px;
-    background:var(--blue-soft);
-    border:1px solid #c9d6fb;
-    color:var(--blue);
-    padding:8px 16px;
-    border-radius:999px;
-    cursor:pointer;
-    margin:20px 0 4px;
-    width:auto;
+  .suggest-card{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:24px 26px;align-self:start;
   }
-  .suggest-btn:hover{background:var(--blue);color:#fff;}
+  .suggest-card label{
+    display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px;
+  }
+  .suggest-card label:first-child{margin-top:0;}
+  .suggest-card textarea{min-height:80px;}
 
-  .ml-gallery-title{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--muted);margin-bottom:14px;
+  .gallery-title{
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--muted);margin-bottom:14px;
   }
-  .vision{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:var(--radius-sm);
-    box-shadow:var(--shadow);
-    padding:16px;margin-bottom:10px;
-    font-size:14px;line-height:1.6;
+  .suggestion{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);
+    box-shadow:var(--shadow);padding:16px;margin-bottom:10px;font-size:14px;line-height:1.6;
   }
-  .vision b{color:var(--navy);}
+  .suggestion .change{color:var(--navy);font-weight:600;margin-bottom:4px;}
+  .suggestion .why{color:var(--text);}
+  .suggestion .who{
+    display:flex;align-items:center;justify-content:space-between;
+    font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);margin-top:10px;
+  }
+
   .footer{
     max-width:1180px;margin:48px auto 0;padding:18px 28px 0;
-    border-top:1px solid var(--border);
-    font-size:12px;color:var(--muted);
-    line-height:1.6;
+    border-top:1px solid var(--border);font-size:12px;color:var(--muted);line-height:1.6;
   }
   .footer a{color:var(--blue);text-decoration:none;}
   .footer a:hover{text-decoration:underline;}
@@ -342,13 +245,13 @@
 <div class="wrap">
 <header>
   <div class="eyebrow">KP · Entendimiento compartido</div>
-  <h1>Qué es, qué hace y qué no hace la KP</h1>
-  <div class="sub">Agrega tus tarjetas en las tres columnas y mueve las que creas que están en la columna equivocada. Al final, escribe tu visión de la KP en una frase.</div>
+  <h1>I Like, I Wish, I Wonder</h1>
+  <div class="sub">Reacciona a lo que acabamos de presentar: agrega tus tarjetas en las tres columnas y vota las que resuenen contigo. Al final, revisa la visión actual de la KP y dinos qué cambiarías.</div>
 </header>
 
 <div class="tabs">
   <div class="tab active" data-step="1">1 · El tablero</div>
-  <div class="tab" data-step="2">2 · Tu visión</div>
+  <div class="tab" data-step="2">2 · La visión actual</div>
 </div>
 
 <main>
@@ -357,7 +260,7 @@
   <section class="step active" id="step1">
 
     <div class="howto">
-      <b>Cómo funciona:</b> escribe una tarjeta en la columna que corresponda — <b>qué es</b> la KP, <b>qué hace</b> hoy, o <b>qué no hace</b>. Si crees que una tarjeta existente está mal ubicada, arrástrala a otra columna. Vota con 👍 las tarjetas con las que estés de acuerdo.
+      <b>Cómo funciona:</b> escribe una tarjeta en la columna que corresponda — algo que <b>te gustó</b> de lo que presentamos, algo que <b>desearías</b> que hubiéramos mostrado o que la KP tuviera, o algo que <b>te preguntas</b> después de verlo. Vota con 👍 las tarjetas con las que estés de acuerdo. Si crees que una tarjeta está en la columna equivocada, arrástrala.
     </div>
 
     <div class="identity">
@@ -368,7 +271,7 @@
         <input type="text" id="id_division" placeholder="División">
       </div>
       <div class="emoji-grid" id="emojiGrid"></div>
-      <div class="identity-status" id="identityStatus">✓ Listo — tus tarjetas y tu visión saldrán firmadas así</div>
+      <div class="identity-status" id="identityStatus">✓ Listo — tus tarjetas y sugerencias saldrán firmadas así</div>
     </div>
 
     <div class="participants">
@@ -377,32 +280,32 @@
     </div>
 
     <div class="board" id="board">
-      <div class="lane" data-col="que_es">
-        <div class="lane-head"><span class="lane-title">Qué es</span><span class="lane-count" id="count_que_es">0</span></div>
-        <div class="lane-hint">En tus palabras: ¿qué tipo de herramienta es la KP?</div>
-        <div class="cards" id="cards_que_es"></div>
-        <form class="add-form" data-col="que_es">
-          <textarea placeholder="Ej: Es un punto de entrada al conocimiento del Banco." required></textarea>
+      <div class="lane" data-col="i_like">
+        <div class="lane-head"><span class="lane-title">👍 I Like</span><span class="lane-count" id="count_i_like">0</span></div>
+        <div class="lane-hint">Qué te gustó de lo que acabamos de presentar.</div>
+        <div class="cards" id="cards_i_like"></div>
+        <form class="add-form" data-col="i_like">
+          <textarea placeholder="Ej: Que busca en varias fuentes a la vez." required></textarea>
           <button class="primary" type="submit">Agregar tarjeta</button>
         </form>
       </div>
 
-      <div class="lane" data-col="que_hace">
-        <div class="lane-head"><span class="lane-title">Qué hace</span><span class="lane-count" id="count_que_hace">0</span></div>
-        <div class="lane-hint">Lo que la KP ya hace hoy cuando la usas.</div>
-        <div class="cards" id="cards_que_hace"></div>
-        <form class="add-form" data-col="que_hace">
-          <textarea placeholder="Ej: Busca en varias fuentes documentales a la vez." required></textarea>
+      <div class="lane" data-col="i_wish">
+        <div class="lane-head"><span class="lane-title">✨ I Wish</span><span class="lane-count" id="count_i_wish">0</span></div>
+        <div class="lane-hint">Qué desearías que hubiera incluido la presentación, o que la KP tuviera.</div>
+        <div class="cards" id="cards_i_wish"></div>
+        <form class="add-form" data-col="i_wish">
+          <textarea placeholder="Ej: Ojalá conectara lecciones entre países." required></textarea>
           <button class="primary" type="submit">Agregar tarjeta</button>
         </form>
       </div>
 
-      <div class="lane" data-col="que_no_hace">
-        <div class="lane-head"><span class="lane-title">Qué no hace</span><span class="lane-count" id="count_que_no_hace">0</span></div>
-        <div class="lane-hint">Lo que la KP no va a hacer / no debería hacer.</div>
-        <div class="cards" id="cards_que_no_hace"></div>
-        <form class="add-form" data-col="que_no_hace">
-          <textarea placeholder="Ej: No decide por ti — sugiere, no firma nada." required></textarea>
+      <div class="lane" data-col="i_wonder">
+        <div class="lane-head"><span class="lane-title">🤔 I Wonder</span><span class="lane-count" id="count_i_wonder">0</span></div>
+        <div class="lane-hint">Qué te preguntas o qué dudas te dejó la presentación.</div>
+        <div class="cards" id="cards_i_wonder"></div>
+        <form class="add-form" data-col="i_wonder">
+          <textarea placeholder="Ej: ¿Cómo sabe qué fuentes priorizar?" required></textarea>
           <button class="primary" type="submit">Agregar tarjeta</button>
         </form>
       </div>
@@ -411,65 +314,49 @@
 
   <section class="step" id="step2">
     <div class="howto">
-      <b>Cómo funciona:</b> completa los espacios en blanco para escribir tu visión de la KP en una sola frase. El botón <b>"Sugerir desde el tablero"</b> pre-llena algunos espacios con lo más mencionado en el paso 1 — todo es editable.
+      <b>Cómo funciona:</b> esta es la visión actual de la KP, palabra por palabra. Léela y dinos qué le cambiarías — puede ser una palabra, una frase, o toda la idea. Vota 👍 las sugerencias de otros con las que estés de acuerdo.
     </div>
 
-    <div class="madlib-wrap">
-      <div class="ml-card">
-        <div class="ml-line">
-          <span class="ml-word">Nuestra KP ayuda a</span>
-          <span class="blank"><input id="ml_rol" placeholder="rol / país" /></span>
-          <span class="ml-word">a</span>
-          <span class="blank"><input id="ml_verbo1" placeholder="reducir, evitar…" /></span>
-          <span class="blank"><input id="ml_dolor" placeholder="un dolor" /></span>,
-          <span class="ml-word">permitiendo</span>
-          <span class="blank"><input id="ml_verbo2" placeholder="aumentar, habilitar…" /></span>
-          <span class="blank"><input id="ml_ganancia" placeholder="una ganancia" /></span>,
-          <span class="ml-word">a diferencia de</span>
-          <span class="blank"><input id="ml_alt" placeholder="cómo lo resuelves hoy" /></span>.
-        </div>
+    <div class="vision-current">
+      <div class="tag">Visión actual</div>
+      <div class="text">La Plataforma de Conocimiento del Grupo BID es una solución digital interna impulsada por IA generativa que facilita el acceso sencillo a información crucial, promoviendo la generación, sistematización y utilización del conocimiento, a diferencia de las soluciones existentes que presentan el conocimiento de manera desconectada y fragmentada.</div>
+    </div>
 
-        <button class="suggest-btn" id="suggestBtn" type="button">✦ Sugerir desde el tablero</button>
-
-        <button class="primary" id="ml_submit" style="margin-top:22px;">Enviar mi visión</button>
+    <div class="suggest-wrap">
+      <div class="suggest-card">
+        <label>Yo cambiaría…</label>
+        <textarea id="sg_cambio" placeholder="Ej: 'facilita el acceso' por 'acelera las decisiones'"></textarea>
+        <label>Por qué</label>
+        <textarea id="sg_razon" placeholder="Opcional — cuéntanos qué te hizo pensar en este cambio"></textarea>
+        <button class="primary" id="sg_submit" style="margin-top:16px;">Enviar sugerencia</button>
       </div>
 
       <div>
-        <div class="ml-gallery-title">Visiones enviadas</div>
-        <div id="visionGallery"></div>
+        <div class="gallery-title">Sugerencias del equipo</div>
+        <div id="suggestionGallery"></div>
       </div>
     </div>
   </section>
 </main>
 
 <div class="footer">
-  Formato "qué es / qué hace / qué no hace" inspirado en el ejercicio de la <em>Elevator Pitch</em> del <em>Inception Deck</em> de <a href="https://www.adlibris.com/sv/bok/the-agile-samurai-9781934356586" target="_blank" rel="noopener">The Agile Samurai</a>, de Jonathan Rasmusson.
+  Formato "I Like, I Wish, I Wonder" — dinámica clásica de retrospectivas ágiles y design thinking para recoger reacciones sin filtro antes de iterar.
 </div>
 </div>
 
 <script>
 /* =====================================================================
-   CONFIGURACIÓN — pega aquí la URL de tu Web App de Apps Script
-   (ver SETUP.md). Mientras esté vacío, la app corre en modo demo local.
+   CONFIGURACIÓN — URL de tu Web App de Apps Script (ver SETUP.md)
 ===================================================================== */
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw_mbVTtZ0hFae0qMkT7lQySgFkXTLRj5cTxHrz-a1gsfkw9MqL1SfAUjZTSt-z4faj/exec";
 
-const COLS = ["que_es","que_hace","que_no_hace"];
-const COL_LABEL = {que_es:"Qué es", que_hace:"Qué hace", que_no_hace:"Qué no hace"};
+const COLS = ["i_like","i_wish","i_wonder"];
+const COL_LABEL = {i_like:"I Like", i_wish:"I Wish", i_wonder:"I Wonder"};
 
-// ---- tarjetas semilla: reemplázalas por tus hallazgos reales ----
-const SEED_CARDS = [
-  {id:"s1", columna:"que_hace", texto:"Busca en varias fuentes documentales del BID a la vez, sin que tengas que saber en cuál está.", autor:"equipo KP", division:"IBT/TTD", emoji:"🛰️", seed:true},
-  {id:"s2", columna:"que_no_hace", texto:"No reemplaza el criterio técnico de un especialista sectorial — sugiere, no decide.", autor:"equipo KP", division:"IBT/TTD", emoji:"🛰️", seed:true},
-  {id:"s3", columna:"que_es", texto:"Es un punto de entrada a lo que ya sabe el Banco, no una fuente nueva de conocimiento.", autor:"equipo KP", division:"IBT/TTD", emoji:"🛰️", seed:true},
-  {id:"s4", columna:"que_no_hace", texto:"No conecta automáticamente una lección de un país con una operación de otro (todavía).", autor:"equipo KP", division:"IBT/TTD", emoji:"🛰️", seed:true},
-];
+const SEED_CARDS = [];
 
-let state = { cards: [], madlib: [], demo: !SCRIPT_URL };
+let state = { cards: [], suggestions: [], demo: !SCRIPT_URL };
 
-// ---------------------------------------------------------------------
-// Identidad: emoji + nombre + división (se guarda en el navegador)
-// ---------------------------------------------------------------------
 const EMOJIS = ["🦜","🌋","🛶","🍋","🐆","🌵","🪁","🥥","🦩","🌊","🎒","🧭","🛰️","📚","🫘","🌽","☕","🎏","🐢","🦋","🌺","🪘","⚡","🍉","🦥","🏔️","🚀","🔍","🧩","🎯"];
 let identity = JSON.parse(localStorage.getItem("kp_identity") || '{"emoji":"","nombre":"","division":""}');
 
@@ -535,28 +422,28 @@ async function apiPost(action, payload){
 
 async function loadCards(){
   if(state.demo){
-    state.cards = JSON.parse(localStorage.getItem("kp_demo_cards") || "null") || [...SEED_CARDS];
+    state.cards = JSON.parse(localStorage.getItem("kp_demo_cards_v2") || "null") || [];
   } else {
     const r = await apiGet("list", {type:"cards"});
     let fromServer = (r && r.ok) ? r.data.map(c => ({id:c.id, columna:c.columna, texto:c.texto, autor:c.autor, division:c.division, emoji:c.emoji||'', votos:c.votos||0})) : [];
-    state.cards = fromServer.length ? fromServer : [...SEED_CARDS];
+    state.cards = fromServer;
   }
   renderBoard();
   renderParticipants();
 }
-async function loadMadlib(){
+async function loadSuggestions(){
   if(state.demo){
-    state.madlib = JSON.parse(localStorage.getItem("kp_demo_madlib") || "[]");
+    state.suggestions = JSON.parse(localStorage.getItem("kp_demo_suggestions") || "[]");
   } else {
-    const r = await apiGet("list", {type:"madlib"});
-    state.madlib = (r && r.ok) ? r.data : [];
+    const r = await apiGet("list", {type:"suggestions"});
+    state.suggestions = (r && r.ok) ? r.data.map(s=>({...s, votos:Number(s.votos)||0})) : [];
   }
-  renderGallery();
+  renderSuggestions();
 }
 function persistDemo(){
   if(!state.demo) return;
-  localStorage.setItem("kp_demo_cards", JSON.stringify(state.cards));
-  localStorage.setItem("kp_demo_madlib", JSON.stringify(state.madlib));
+  localStorage.setItem("kp_demo_cards_v2", JSON.stringify(state.cards));
+  localStorage.setItem("kp_demo_suggestions", JSON.stringify(state.suggestions));
 }
 
 function renderBoard(){
@@ -671,63 +558,52 @@ document.querySelectorAll(".tab").forEach(tab=>{
   };
 });
 
-const STOPWORDS = new Set(["que","de","la","el","los","las","a","en","y","un","una","con","para","del","al","su","sus","no","se","lo","por","como","es","son","este","esta","tu","hoy"]);
-const VERB_HINTS_REDUCE = ["reduce","reducir","evita","evitar","busca","agiliza","acelera","simplifica","filtra","previene"];
-const VERB_HINTS_GAIN = ["permite","habilita","aumenta","conecta","mejora","fortalece","facilita","suma"];
-
-function suggestFromBoard(){
-  const haceTexts = state.cards.filter(c=>c.columna==="que_hace").map(c=>c.texto.toLowerCase());
-  const esTexts = state.cards.filter(c=>c.columna==="que_es").map(c=>c.texto.toLowerCase());
-  const words = {};
-  haceTexts.join(" ").split(/[^a-záéíóúñ]+/i).forEach(w=>{
-    if(w.length>3 && !STOPWORDS.has(w)) words[w]=(words[w]||0)+1;
-  });
-  const ranked = Object.entries(words).sort((a,b)=>b[1]-a[1]).map(x=>x[0]);
-  const foundVerb1 = VERB_HINTS_REDUCE.find(v=> ranked.includes(v)) || ranked[0] || "";
-  const foundGain = VERB_HINTS_GAIN.find(v=> ranked.includes(v)) || "";
-  const noun = ranked.find(w=> !VERB_HINTS_REDUCE.includes(w) && !VERB_HINTS_GAIN.includes(w)) || "";
-
-  document.getElementById("ml_rol").value = document.getElementById("ml_rol").value || "los equipos de país";
-  document.getElementById("ml_verbo1").value = foundVerb1;
-  document.getElementById("ml_dolor").value = noun ? `la búsqueda dispersa de ${noun}` : "";
-  document.getElementById("ml_verbo2").value = foundGain || "conectar";
-  document.getElementById("ml_ganancia").value = esTexts.length ? "decisiones más rápidas y trazables" : "";
-  document.getElementById("ml_alt").value = "preguntar a un colega o revisar carpetas sueltas";
-}
-document.getElementById("suggestBtn").onclick = suggestFromBoard;
-
-document.getElementById("ml_submit").onclick = async ()=>{
+document.getElementById("sg_submit").onclick = async ()=>{
+  const cambio = document.getElementById("sg_cambio").value.trim();
+  const razon = document.getElementById("sg_razon").value.trim();
+  if(!cambio){ alert("Escribe qué cambiarías antes de enviar."); return; }
+  if(!requireIdentity()) return;
   const payload = {
-    rol: document.getElementById("ml_rol").value.trim(),
-    verbo1: document.getElementById("ml_verbo1").value.trim(),
-    dolor: document.getElementById("ml_dolor").value.trim(),
-    verbo2: document.getElementById("ml_verbo2").value.trim(),
-    ganancia: document.getElementById("ml_ganancia").value.trim(),
-    alternativa: document.getElementById("ml_alt").value.trim(),
+    cambio, razon,
     autor: identity.nombre.trim(),
     division: identity.division.trim(),
     emoji: identity.emoji,
+    votos: 0
   };
-  if(!requireIdentity()) return;
-  if(!payload.rol){ alert("Completa al menos el rol/país de la frase antes de enviar."); return; }
-  state.madlib.unshift(payload);
+  const id = "sg_"+Date.now();
+  state.suggestions.unshift({...payload, id});
   persistDemo();
-  renderGallery();
-  await apiPost("addMadlib", payload);
-  ["ml_rol","ml_verbo1","ml_dolor","ml_verbo2","ml_ganancia","ml_alt"].forEach(id=>document.getElementById(id).value="");
+  renderSuggestions();
+  document.getElementById("sg_cambio").value = "";
+  document.getElementById("sg_razon").value = "";
+  await apiPost("addSuggestion", payload);
 };
 
-function renderGallery(){
-  const el = document.getElementById("visionGallery");
-  if(!state.madlib.length){ el.innerHTML = `<div class="empty">Aún no hay visiones enviadas.</div>`; return; }
-  el.innerHTML = state.madlib.map(m=>`
-    <div class="vision">
-      Nuestra KP ayuda a <b>${escapeHtml(m.rol)}</b> a ${escapeHtml(m.verbo1)} <b>${escapeHtml(m.dolor)}</b>,
-      permitiendo ${escapeHtml(m.verbo2)} <b>${escapeHtml(m.ganancia)}</b>,
-      a diferencia de ${escapeHtml(m.alternativa)}.
-      <div class="who">${m.emoji||''} ${escapeHtml(m.autor)}${m.division? ' · '+escapeHtml(m.division):''}</div>
+function renderSuggestions(){
+  const el = document.getElementById("suggestionGallery");
+  if(!state.suggestions.length){ el.innerHTML = `<div class="empty">Aún no hay sugerencias — sé la primera.</div>`; return; }
+  const sorted = [...state.suggestions].sort((a,b)=> (b.votos||0)-(a.votos||0));
+  el.innerHTML = sorted.map(s=>`
+    <div class="suggestion">
+      <div class="change">${escapeHtml(s.cambio)}</div>
+      ${s.razon ? `<div class="why">${escapeHtml(s.razon)}</div>` : ''}
+      <div class="who">
+        <span>${s.emoji||''} ${escapeHtml(s.autor)}${s.division? ' · '+escapeHtml(s.division):''}</span>
+        <button class="vote-btn" data-svote="${s.id}">👍 ${s.votos||0}</button>
+      </div>
     </div>
   `).join("");
+  document.querySelectorAll("[data-svote]").forEach(btn=>{
+    btn.onclick = async ()=>{
+      const id = btn.dataset.svote;
+      const s = state.suggestions.find(x=>x.id===id);
+      if(!s) return;
+      s.votos = (s.votos||0)+1;
+      await apiPost("voteSuggestion", {id});
+      persistDemo();
+      renderSuggestions();
+    };
+  });
 }
 
 function escapeHtml(str){
@@ -736,7 +612,7 @@ function escapeHtml(str){
 
 if(state.demo){ document.getElementById("banner").classList.add("show"); }
 loadCards();
-loadMadlib();
+loadSuggestions();
 </script>
 </body>
 </html>
